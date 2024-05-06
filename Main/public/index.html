@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Watcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Time Watcher</h1>
+            <p>Choose a city to see the current time of day</p>
+            <select id="citySelector">
+                <option value="Corvallis, OR">Corvallis, OR</option>
+                <option value="New York, NY">New York, NY</option>
+                <option value="London, UK">London, UK</option>
+                <!-- Additional cities can be added here -->
+            </select>
+        </header>
+        <div class="time-display">
+            <div class="display-block"><span>Current City</span> <strong id="currentCity">Corvallis, OR</strong></div>
+            <div class="display-block"><span>Current Time</span> <strong id="currentTime">Loading...</strong></div>
+            <div class="display-block"><span>Timezone</span> <strong id="timezone">PST (Pacific Standard Time)</strong></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
