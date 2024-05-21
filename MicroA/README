@@ -1,0 +1,3 @@
+In order to run just make sure to npm install in console to get all dependencies. 
+
+Then type: "node microserviceA.js" into console and it will be running
