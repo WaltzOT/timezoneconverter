@@ -72,7 +72,7 @@ console.log(response.data);
 import axios from 'axios';
 
 const response = await axios.post('http://localhost:3000/metric-to-metric', {
-    grams: [1000, 2000, 3000]
+    grams: [1, 2, 3]
 });
 console.log(response.data);
 ```
