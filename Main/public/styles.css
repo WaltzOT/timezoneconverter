@@ -29,14 +29,76 @@ header p {
     color: #666;
 }
 
-#citySelector {
-    margin: 20px 0; /* Adjusts the margin to remove horizontal centering */
-    padding: 10px;
-    width: 33%; /* Keeps the width to one-third */
-    box-sizing: border-box;
-    display: block; /* Ensures it remains a block-level element */
+.city-selector-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    width: fit-content; 
 }
 
+.hidden {
+    display: none;
+}
+
+#citySelector {
+    padding: 10px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip {
+    background: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 1em;
+    line-height: 1em;
+    text-align: center;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position above the tooltip */
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
 
 .time-display {
     display: grid;

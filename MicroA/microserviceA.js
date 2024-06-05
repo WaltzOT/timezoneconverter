@@ -21,7 +21,7 @@ app.post('/imperial-to-metric', (req, res) => {
 // Convert metric to metric
 app.post('/metric-to-metric', (req, res) => {
     const gramsArray = req.body.grams
-    const milligramsArray = gramsArray.map(grams => grams * 0.001)
+    const milligramsArray = gramsArray.map(grams => grams / 0.001)
     res.json({ milligrams: milligramsArray })
 })
 

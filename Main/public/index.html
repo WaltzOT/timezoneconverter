@@ -10,14 +10,27 @@
     <div class="container">
         <header>
             <h1>Time Watcher</h1>
-            <p>Choose a city to see the current time of day</p>
-            <select id="citySelector">
-                <option value="Corvallis, OR">Corvallis, OR</option>
-                <option value="New York, NY">New York, NY</option>
-                <option value="London, UK">London, UK</option>
-                <!-- Additional cities can be added here -->
-            </select>
-        </header>
+            <p>Choose a city to see the current time of day or switch between local time and UTC</p>
+            <div class="city-selector-container">
+                <select id="citySelector">
+                    <option value="Corvallis, OR">Corvallis, OR</option>
+                    <option value="New York, NY">New York, NY</option>
+                    <option value="London, UK">London, UK</option>
+                    <!-- Additional cities can be added here -->
+                </select>
+                <button id="switchToUTC" class="hidden">Switch to UTC</button>
+                <button id="switchToLocal" class="hidden">Switch to Local</button>
+            </div>
+            <div class="add-city-container">
+                <input type="text" id="newCity" placeholder="City, Country/State">
+                <button id="addCityButton">Add City</button>
+            </div>
+            <div class="compare-time-container">
+                <select id="city1Selector"></select>
+                <select id="city2Selector"></select>
+                <button id="compareTimeButton">Compare Time Difference</button>
+            </div>
+        </header>          
         <div class="time-display">
             <div class="display-block"><span>Current City</span> <strong id="currentCity">Corvallis, OR</strong></div>
             <div class="display-block"><span>Current Time</span> <strong id="currentTime">Loading...</strong></div>
